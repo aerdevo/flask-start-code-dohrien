@@ -1,41 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sp5der Home</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
-    <p>Main page here</p>
-    <form action="/new_todo" method="POST">
-        <input type="text" placeholder="Write your todo" name="todo">
-        <input type="submit">
-    </form>
+<header>
+    <div class="container">
+      <h1 class="logo"></h1>
 
-    <h4>My Items </h4>
-    <div>
-        {% for todo in todos %}
-            {% if not todo.complete %}
-                <span> {{ todo.item }} </span>
-                <span> 
-                    <a href="/update/{{todo.id}}"> complete</a>
-                </span>
-                <span> 
-                    <a href="/delete/{{todo.id}}"> delete</a>
-                </span>
-                <br>
-            {% else %}
-                <span> <strike> {{ todo.item }} </strike> </span>
-                <span> 
-                    <a href="/update/{{todo.id}}"> un-complete</a>
-                </span>
-                <span> 
-                    <a href="/delete/{{todo.id}}"> delete</a>
-                </span>
-                <br>
-            {% endif %}
-        {% endfor %}
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+         <li><a href="purchase.html">Purchase</a></li>
+        </ul>
+      </nav>
     </div>
-
-</body>
+</header>
+<style>
+body {
+  background-image: url("https://spiderworldwides.com/wp-content/uploads/2023/04/sp5der-banner-scaled.jpg");
+}
+  img {
+  width: 20%;
+  height: auto;
+  object-fit: cover;
+  object-position: 50% 100%;
+}
+</style>
 </html>
